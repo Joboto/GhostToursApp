@@ -16,11 +16,13 @@
 						formElements : {
 							"inp1" : "%d/%m/%Y"
 						}
+						
 					});
 				</script>
 		<input type="submit" value="Add date"/>
 	</g:form>
-</div>
+</div><br/>
+ 
 <div id="dateListBox">
 	<g:if test="${flash.message}">
 		<label class="label-danger">${flash.message}</label>
@@ -31,7 +33,7 @@
 		</tr>
 		<g:each in="${datesUnavailable.sort{it.date}}" var="dateUnavailable">
 			<tr>
-				<td>${dateUnavailable.date.format("d-MMM-yy")}</td>
+				<td>${dateUnavailable.date.format("EEEE dd/MM/yy")}</td>
 				<td><g:form action="deleteDateUnavailable">
 						<g:hiddenField name="dateUnavailableId" value="${dateUnavailable.id}"/>
 						<input type="submit" value="X" onclick="return confirm('Delete date?')"/>
