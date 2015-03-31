@@ -1,3 +1,81 @@
 @CHARSET "ISO-8859-1";
 table, td, th {border: 1px solid black;}
-select {color: black;}
+
+.bt-info{
+	background-color:#2C3E50;
+	border-color:#2C3E50;
+	color:#FFFFFF;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open.dropdown-toggle.btn-info {
+	color:#FFFFFF;
+	background-color:#1E2A36
+}
+.bt-primary{
+	background-color:#2C3E50;
+	border-color:#2C3E50;
+	color:#FFFFFF;
+}
+.btn-primary:hover,
+.btn-peimary:focus,
+.btn-peimary:active,
+.btn-peimary.active,
+.open.dropdown-toggle.btn-peimary {
+	color:#FFFFFF;
+	background-color:#1E2A36
+}
+.bt-success{
+	background-color:#188C9C;
+	border-color:#11866F;
+	color:#FFFFFF;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open.dropdown-toggle.btn-success {
+	color:#FFFFFF;
+	background-color:#1E2A36
+}
+
+.bt-success{
+	background-color:#2C3E50;
+	border-color:#2C3E50;
+	color:#FFFFFF;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open.dropdown-toggle.btn-success {
+	color:#FFFFFF;
+	background-color:#1E2A36;
+}
+div#banner {
+	width:960px;
+	height:400px;
+	margin:auto;
+	background:url(http://www.cityofthedeadtours.com/wp-content/themes/dt-nimble/timthumb.php?src=/wp-content/uploads/2012/11/S1.jpg&zc=1&w=960&h=400) repeat 0 0 ;
+	background-position: left top;
+}
+div#banner p{
+	font: 15px Arial, Helvetica, sans-serif;
+	color:white;
+	position:relative;
+	left:20px;
+	top:120px;
+	width:305px;
+	padding:20px;
+	background:black;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:20px;
+	zoom:1;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	
+}
+
