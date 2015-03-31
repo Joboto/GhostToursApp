@@ -11,7 +11,7 @@
 <label>Booked placed: ${tour.tourType.spaces - tour.getRemainingPlaces()} / ${tour.tourType.spaces}</label><br/><br/>
 
 
-<g:if test="${session.getAttribute("isBooker") && tour.datetime.getTime() > System.currentTimeMillis() && remainingTourPlaces>0}">
+<g:if test="${(session.getAttribute("isBooker") || session.getAttribute("isManager")) && tour.datetime.getTime() > System.currentTimeMillis() && remainingTourPlaces>0}">
 <div id="bookingDetailsBox">
 	<g:form id="bookingDetailsForm" controller="booking" action="addBooking">
 		<fieldset>
@@ -35,7 +35,7 @@
 		<g:each in="${tourBookings}" var="booking">
 			<tr>
 				<td>${booking.custName}</td><td>${booking.numberPeople}</td><td>${booking.staff.name}</td>
-				<g:if test="${session.getAttribute("isBooker") && tour.datetime.getTime() > System.currentTimeMillis()}">
+				<g:if test="${(session.getAttribute("isBooker") || session.getAttribute("isManager")) && tour.datetime.getTime() > System.currentTimeMillis()}">
 				<td><g:form action="cancelBooking">
 						<g:hiddenField name="bookingId" value="${booking.id}"/>
 						<g:hiddenField name="chosenTour" value="${tour.id}"/>
