@@ -71,7 +71,7 @@ class StaffController {
 					
 						ArrayList<Role> listOfRoles = loggedInStaff.roles().sort{it.id}
 						if(Role.findByName("Manager") in listOfRoles){        // if the staff member has only one role, the appropriate method is called by the redirect to render the next view. 
-							redirect(action:"manageStaff")       
+							redirect(action:"managerDashboard")       
 						} else {
 							if(Role.findByName("Booker") in listOfRoles){
 								redirect(action:"bookerDashboard")
@@ -99,7 +99,7 @@ class StaffController {
 			loggedInStaff = session.getAttribute("loggedInStaff")
 			ArrayList<Role> listOfRoles = loggedInStaff.roles().sort{it.id}
 			if(Role.findByName("Manager") in listOfRoles){        // if the staff member has only one role, the appropriate method is called by the redirect to render the next view. 
-				redirect(action:"manageStaff")       
+				redirect(action:"managerDashboard")       
 			} else {
 				if(Role.findByName("Booker") in listOfRoles){
 					redirect(action:"bookerDashboard")
