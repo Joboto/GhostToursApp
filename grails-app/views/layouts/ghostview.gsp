@@ -33,9 +33,12 @@
 			<div class="navbar-header">
 				<ul class="nav nav-tabs" role="tablist">
 					<g:if test="${session.getAttribute("isManager")}" >
-						<g:each in="${Role.list()}" var="role">
+						<li><g:link controller="staff" action="bookerDashboard">Bookings</g:link></li>
+						<li><g:link controller="staff" action="guideDashboard">View Rota</g:link></li>
+						<li><g:link controller="staff" action="manageStaff">Manage Staff</g:link></li>
+						<%-- <g:each in="${Role.list()}" var="role">
 					<li><g:link name="role" value="${role.id}" controller="staff" action="${role.name}Dashboard">${role.name}</g:link></li>
-						</g:each>
+						</g:each>--%>
 					</g:if>
 					<g:else>
 						<g:each in="${session.getAttribute("loggedInStaff").roles()}" var="role">
@@ -53,6 +56,8 @@
 		</div>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+	<script sr="js/lib/jquery-1.9.1.js" type="text/javascript"></script>
 	</body>
+	
 	
 </html>
