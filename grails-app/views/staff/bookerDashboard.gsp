@@ -15,7 +15,7 @@
 			<h4>${futureToursList[0].datetime.format("EEEE")} - ${futureToursList[0].datetime.format("dd MMMM yyyy")}</h4>
 			<g:each in="${futureToursList}" var="tour" status="i">
 
-				<g:radio name="chosenTour" value="${tour.id}"/><label>${tour.datetime.format("HH:mm")} - ${tour.tourType.typeName} - ${tour.getRemainingPlaces()} places left!</label><br/>
+				<g:radio id="chosenTour${i}" name="chosenTour" value="${tour.id}"/><label for="chosenTour${i}">${tour.datetime.format("HH:mm")} - ${tour.tourType.typeName} - ${tour.getRemainingPlaces()} places left!</label><br/>
 			</g:each>
 		</fieldset>
 		<input type="submit" value="Proceed to Booking"/>
