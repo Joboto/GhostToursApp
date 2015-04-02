@@ -1,5 +1,3 @@
-<%@ page import="ghost.Role"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +17,10 @@
 		<asset:stylesheet src="bootstrap.min.css"/>
 		<asset:javascript src="application.js"/>
 </head>
+
 <body style="background:#eeee;">
 		<div id="banner"><p>CITY OF THE DEAD</p>
 
-            
 <div id="loginFormBox" class="container">
      <p><br></p>
      <div class="row">
@@ -32,7 +30,7 @@
                          <div class="panel-body">
                          <div class="span4" class="sidebar">
                          <div class="page-header">
-                         <h3>Hello Admin</h3>
+                         <h3>Welcome!</h3>
                          </div>
                          <g:if test="${flash.message}">
 		                 <div style="display: block">${flash.message}</div>
