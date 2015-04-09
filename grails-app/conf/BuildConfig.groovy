@@ -6,7 +6,7 @@ grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
-grails.server.port.http = 8090
+//grails.server.port.http = 8090
 
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
@@ -56,7 +56,7 @@ grails.project.dependency.resolution = {
 
     plugins {
         // plugins for the build system only
-        build ":tomcat:7.0.55"
+        //build ":tomcat:7.0.55"
 
         // plugins for the compile step
         compile ":scaffolding:2.1.2"

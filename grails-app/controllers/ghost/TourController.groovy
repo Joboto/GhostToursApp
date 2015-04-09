@@ -73,7 +73,7 @@ class TourController {
 					schedulingService.createTour(tempDate, "Double Dead")
 			
 				}// end upto loop
-		
+				
 				redirect(controller:"staff", action:"guideDashboard")
 			}
 		}//end session validation

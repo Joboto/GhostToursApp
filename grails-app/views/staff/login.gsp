@@ -40,7 +40,7 @@
 			<legend class="form-signin-heading">Enter login credentials</legend>
 			
 			<input type="text" name="username"required placeholder="Username" class="form-control"/><br/>
-			<input type="text" name="password" required placeholder="Password" class="form-control"/><br/>
+			<input type="password" name="password" required placeholder="Password" class="form-control"/><br/>
 		</fieldset>
                               <hr/>
                               

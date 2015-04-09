@@ -29,8 +29,8 @@ public class DBConnect {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager
-					.getConnection("jdbc:mysql://localhost/ghost2?"
-							+ "user=admin&password=admin");
+					.getConnection("jdbc:mysql://localhost:3306/cotdadmg_ghost2?"
+							+ "user=cotdadmg_root&password=pa55word");
 
 			TreeMap<Tour, Guide> forWriting = week.getAll();
 
@@ -39,7 +39,7 @@ public class DBConnect {
 				Guide guide = entry.getValue();
 
 				statement = connection.createStatement();
-				statement.executeUpdate("update ghost2.tour set staff_id = "
+				statement.executeUpdate("update cotdadmg_ghost2.tour set staff_id = "
 						+ guide.get_idi() + " where id = " + tour.get_id()
 						+ ";");
 			}
@@ -54,9 +54,9 @@ public class DBConnect {
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			connection = DriverManager.getConnection(
-			"jdbc:mysql://localhost/ghost2?" + "user=admin&password=admin");
+			"jdbc:mysql://localhost:3306/cotdadmg_ghost2?" + "user=cotdadmg_root&password=pa55word");
 			statement = connection.createStatement();
-			resultSet = statement.executeQuery("select * from ghost2.staff_role where role_id = 1");
+			resultSet = statement.executeQuery("select * from cotdadmg_ghost2.staff_role where role_id = 1");
 
 			getGuides(resultSet);
 
@@ -66,7 +66,7 @@ public class DBConnect {
 		
 		try {
 			statement = connection.createStatement();
-			resultSet = statement.executeQuery("select * from ghost2.tour");
+			resultSet = statement.executeQuery("select * from cotdadmg_ghost2.tour");
 			getTours(resultSet);
 
 		} catch (SQLException e) {
@@ -94,7 +94,7 @@ public class DBConnect {
 		try {
 			Statement newStatement = connection.createStatement();
 			newResultSet = newStatement
-					.executeQuery("select type_name from ghost2.tour_type where id = "
+					.executeQuery("select type_name from cotdadmg_ghost2.tour_type where id = "
 							+ type_id);
 			while (newResultSet.next()) {
 				type = newResultSet.getString("type_name");
@@ -110,7 +110,7 @@ public class DBConnect {
 		while (resultSet.next()) {
 			
 			Statement statementTwo = connection.createStatement();
-			ResultSet resultSetTwo = statementTwo.executeQuery("select * from ghost2.staff where id = " + resultSet.getInt("staff_id") + ";");
+			ResultSet resultSetTwo = statementTwo.executeQuery("select * from cotdadmg_ghost2.staff where id = " + resultSet.getInt("staff_id") + ";");
 			while (resultSetTwo.next()) {
 				Guide guide = new Guide(resultSetTwo.getString("name"),
 						getAvailability(resultSetTwo.getInt("id")),
@@ -125,7 +125,7 @@ public class DBConnect {
 		try {
 			statement = connection.createStatement();
 			resultSet = statement
-					.executeQuery("select * from ghost2.available_day where staff_id = "
+					.executeQuery("select * from cotdadmg_ghost2.available_day where staff_id = "
 							+ staff_id);
 
 			while (resultSet.next()) {
