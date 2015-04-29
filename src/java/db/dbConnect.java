@@ -30,7 +30,7 @@ public class DBConnect {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager
 					.getConnection("jdbc:mysql://localhost:3306/cotdadmg_ghost2?"
-							+ "user=cotdadmg_root&password=pa55word");
+							+ "user=cotdadmg_root&password=");
 
 			TreeMap<Tour, Guide> forWriting = week.getAll();
 
@@ -54,7 +54,7 @@ public class DBConnect {
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			connection = DriverManager.getConnection(
-			"jdbc:mysql://localhost:3306/cotdadmg_ghost2?" + "user=cotdadmg_root&password=pa55word");
+			"jdbc:mysql://localhost:3306/cotdadmg_ghost2?" + "user=cotdadmg_root&password=");
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery("select * from cotdadmg_ghost2.staff_role where role_id = 1");
 

@@ -18,7 +18,7 @@
 <g:link action="incrementRotaMonth">Next Month</g:link>
 
 <g:if test="${!session.getAttribute("isManager")}">
-	<table>
+	<table class="table-striped table-condensed">
 		<tr>
 			<th>Date</th><th>3.30 UG</th><th>7.30 DD</th><th>8pm UG</th><th>8.30 GY</th><th>9.30 DD</th>
 		</tr>
@@ -69,7 +69,7 @@
 		<input type="submit" value="Generate Tours"/>
 	</g:form>
 	
-	<table>
+	<table class="table-striped table-condensed">
 		<tr>
 			<th>Date</th><th>3.30 UG</th><th>7.30 DD</th><th>8pm UG</th><th>8.30 GY</th><th>9.30 DD</th>
 		</tr>

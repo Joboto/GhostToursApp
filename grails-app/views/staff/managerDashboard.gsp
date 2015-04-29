@@ -22,7 +22,7 @@
 		<th>Other Actions</th>
 	<tr class="info">
 	<g:each in="${activeStaffList}" var="staffMember">
-			<tr class="light"> 
+			<tr> 
 				<td>${staffMember.name}</td>
 				<td>${staffMember.phone}</td>
 				<td>${staffMember.email}</td>
@@ -31,7 +31,7 @@
 					<g:form controller="staff" action="removeRole">
 						<g:hiddenField name="roleId" value="${role.id}"/> 
 						<g:hiddenField name="staffId" value="${staffMember.id}"/>
-						<input type="submit" value="${role.name}"/>
+						<input type="submit" class="btn btn-lg btn-default btn-xs" value="${role.name}"/>
 					</g:form>
 					</g:each>
 					Click role to remove.
@@ -47,18 +47,18 @@
 					<li>
 					<g:form controller="staff" action="viewStaff">
 						<g:hiddenField name="staffId" value="${staffMember.id}"/>
-						<input type="submit" value="Edit Details" class="btn btn-lg btn-info btn-xs">
+						<input type="submit" value="Edit Details" class="btn btn-lg btn-primary btn-xs">
 					</g:form>
 					</li>
 					<li>
 						<g:form controller="dateUnavailable" action="showDatesUnavailable">
 							<g:hiddenField name="staffId" value="${staffMember.id}"/>
-						<input type="submit" value="View availability" class="btn btn-lg btn-info btn-xs">
+						<input type="submit" value="View availability" class="btn btn-lg btn-primary btn-xs">
 					</g:form>
 					<li>
 					<g:form controller="staff" action="toggleStaffStatus">
 						<g:hiddenField name="staffId" value="${staffMember.id}"/>
-						<input type="submit" value="Set inactive" onclick="return confirm('Set staff status to inactive?')" class="btn btn-lg btn-info btn-xs">
+						<input type="submit" value="Set inactive" onclick="return confirm('Set staff status to inactive?')" class="btn btn-lg btn-primary btn-xs">
 					</g:form>
 					</li>
 					</ul>
